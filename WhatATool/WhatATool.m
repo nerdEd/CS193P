@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "PolygonShape.h"
 
 void PrintPathInfo() {
 	NSString *path = @"~";
@@ -52,7 +53,7 @@ void PrintIntrospectionInfo() {
 		SEL selector = @selector( lowercaseString );
 		if( [object respondsToSelector: selector] ) {
 			NSLog( @"Responds to lowercaseString: YES" );
-			NSLog( [NSString stringWithFormat:@"lowercaseString is: %@", [object lowercaseString] ] );
+			NSLog( [NSString stringWithFormat: @"lowercaseString is: %@", [object lowercaseString] ] );
 		}
 		else {
 			NSLog( @"Responds to lowercaseString: NO" );
@@ -60,6 +61,29 @@ void PrintIntrospectionInfo() {
 		
 		NSLog(@"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 	}
+}
+
+void PrintPolygonInfo() {
+	PolygonShape *square = [[PolygonShape alloc] initWithNumberOfSides:4 minimumNumberOfSides:3 maximumNumberOfSides:7];
+	NSLog( [square description] );
+	PolygonShape *hexagon = [[PolygonShape alloc] initWithNumberOfSides:6 minimumNumberOfSides:5 maximumNumberOfSides:9];
+	NSLog( [hexagon description] );
+	PolygonShape *dodecagon = [[PolygonShape alloc] initWithNumberOfSides:12 minimumNumberOfSides:9 maximumNumberOfSides:12];
+	NSLog( [dodecagon description] );
+	
+	NSMutableArray *polygonArray = [[NSMutableArray alloc] init];
+	[polygonArray addObject: square];
+	[polygonArray addObject: hexagon];
+	[polygonArray addObject:dodecagon];
+	
+	for( PolygonShape *shape in polygonArray) {
+		[shape setNumberOfSides: 10];
+	}
+	
+	[polygonArray release];
+	[square release];
+	[hexagon release];
+	[dodecagon release];
 }
 
 int main (int argc, const char * argv[]) {
@@ -72,6 +96,8 @@ int main (int argc, const char * argv[]) {
 	PrintBookmarkInfo();
 	NSLog(@"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 	PrintIntrospectionInfo();
+	NSLog(@"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+	PrintPolygonInfo();
 	
 	[pool release];
 	
