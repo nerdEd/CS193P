@@ -9,10 +9,12 @@
     IBOutlet UILabel *numberOfSidesLabel;
 	IBOutlet PolygonShape *polygon;
 	IBOutlet PolygonView *polygonView;
+	IBOutlet UISlider *slider;
 }
 
 - (IBAction)decrease;
 - (IBAction)increase;
+- (IBAction)sliderUpdate;
 - (void)updateInterface;
 
 @end
