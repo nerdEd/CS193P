@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PolygonShape.h"
 
 @interface HelloPolyAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
+	IBOutlet PolygonShape *polygon;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

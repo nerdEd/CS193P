@@ -13,6 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		D378B16C1047024800EEF2C9 /* PolygonView.m in Sources */ = {isa = PBXBuildFile; fileRef = D378B16B1047024800EEF2C9 /* PolygonView.m */; };
 		D3EE4DE11041F1CD00AA2D72 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EE4DE01041F1CD00AA2D72 /* Controller.m */; };
 		D3EE4DFB1041F44100AA2D72 /* PolygonShape.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EE4DFA1041F44100AA2D72 /* PolygonShape.m */; };
 /* End PBXBuildFile section */
@@ -28,10 +29,12 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* HelloPoly_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloPoly_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* HelloPoly-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HelloPoly-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		D3EE4DDF1041F1CD00AA2D72 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
-		D3EE4DE01041F1CD00AA2D72 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
-		D3EE4DF91041F44100AA2D72 /* PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonShape.h; sourceTree = "<group>"; };
-		D3EE4DFA1041F44100AA2D72 /* PolygonShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonShape.m; sourceTree = "<group>"; };
+		D378B16A1047024800EEF2C9 /* PolygonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonView.h; sourceTree = "<group>"; };
+		D378B16B1047024800EEF2C9 /* PolygonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonView.m; sourceTree = "<group>"; };
+		D3EE4DDF1041F1CD00AA2D72 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = ../Controller.h; sourceTree = "<group>"; };
+		D3EE4DE01041F1CD00AA2D72 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Controller.m; path = ../Controller.m; sourceTree = "<group>"; };
+		D3EE4DF91041F44100AA2D72 /* PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PolygonShape.h; path = ../PolygonShape.h; sourceTree = "<group>"; };
+		D3EE4DFA1041F44100AA2D72 /* PolygonShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PolygonShape.m; path = ../PolygonShape.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,12 @@
 			children = (
 				1D3623240D0F684500981E51 /* HelloPolyAppDelegate.h */,
 				1D3623250D0F684500981E51 /* HelloPolyAppDelegate.m */,
+				D3EE4DF91041F44100AA2D72 /* PolygonShape.h */,
+				D3EE4DFA1041F44100AA2D72 /* PolygonShape.m */,
+				D3EE4DDF1041F1CD00AA2D72 /* Controller.h */,
+				D3EE4DE01041F1CD00AA2D72 /* Controller.m */,
+				D378B16A1047024800EEF2C9 /* PolygonView.h */,
+				D378B16B1047024800EEF2C9 /* PolygonView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -73,10 +82,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				D3EE4DDF1041F1CD00AA2D72 /* Controller.h */,
-				D3EE4DE01041F1CD00AA2D72 /* Controller.m */,
-				D3EE4DF91041F44100AA2D72 /* PolygonShape.h */,
-				D3EE4DFA1041F44100AA2D72 /* PolygonShape.m */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				1D3623260D0F684500981E51 /* HelloPolyAppDelegate.m in Sources */,
 				D3EE4DE11041F1CD00AA2D72 /* Controller.m in Sources */,
 				D3EE4DFB1041F44100AA2D72 /* PolygonShape.m in Sources */,
+				D378B16C1047024800EEF2C9 /* PolygonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

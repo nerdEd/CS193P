@@ -19,6 +19,10 @@
     [window makeKeyAndVisible];
 }
 
+- (void)applicationWillTerminate:(UIApplication *)application {
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	[userDefaults setInteger: polygon.numberOfSides forKey: @"sides"];
+}
 
 - (void)dealloc {
     [window release];

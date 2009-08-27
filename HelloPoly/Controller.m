@@ -5,18 +5,25 @@
 - (void)awakeFromNib { 
 	[polygon setMinimumNumberOfSides: 3];
 	[polygon setMaximumNumberOfSides: 12];
-	[polygon setNumberOfSides: 4];
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	int sides = [userDefaults integerForKey: @"sides"];
+	if( sides == 0 ) {
+		sides = 4;
+	}
+	[polygon setNumberOfSides: sides];
 	[self updateInterface];
 }
 
 - (IBAction)decrease {
 	[polygon setNumberOfSides: polygon.numberOfSides - 1];
-	[self updateInterface];
+	[self updateInterface];	
+	[polygonView setNeedsDisplay]; 
 }
 
 - (IBAction)increase {
 	[polygon setNumberOfSides: polygon.numberOfSides + 1];
-	[self updateInterface];
+	[self updateInterface];	
+	[polygonView setNeedsDisplay]; 
 }
 
 - (void)updateInterface {
