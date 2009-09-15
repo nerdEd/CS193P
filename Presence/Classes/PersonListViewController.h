@@ -9,18 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Person.h"
 
-@interface PersonListViewController : UIViewController {
-	Person *neo;
-	Person *smith;
-	IBOutlet UILabel *neoNameLabel;
-	IBOutlet UIImageView *neoAvatar;
-	IBOutlet UILabel *smithNameLabel;
-	IBOutlet UIImageView *smithAvatar;
+@interface PersonListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+	NSMutableArray *tweeps;
 }
-
-
-- (void)showDetailsForPerson:(Person *) person;
-- (IBAction)showDetailsForNeo;
-- (IBAction)showDetailsForSmith;
 
 @end

@@ -11,13 +11,13 @@
 
 @implementation Person
 
-@synthesize name, avatar, status;
+@synthesize name, avatar, statusUpdates, username;
 
-- (Person*)initWithName: (NSString*) aName Status: (NSString*) aStatus AndAvatar: (NSString*) image {
+- (Person*)initWithName: (NSString*) aName Username: (NSString*) aUsername AndAvatar: (NSString*) image {
 	if( self = [super init] ) {
-		[self setName:aName];
-		[self setAvatar:image];
-		[self setStatus:aStatus];
+		self.name = aName;
+		self.username = aUsername;
+		self.avatar = image;
 	}
 	return self;
 }

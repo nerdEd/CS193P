@@ -11,13 +11,15 @@
 
 @interface Person : NSObject {
 	NSString *name;
+	NSString *username;
 	NSString *avatar;
-	NSString *status;
+	NSArray *statusUpdates;
 }
 
 @property(nonatomic, retain) NSString *name;
+@property(nonatomic, retain) NSString *username;
 @property(nonatomic, retain) NSString *avatar;
-@property(nonatomic, retain) NSString *status;
+@property(nonatomic, retain) NSArray *statusUpdates;
 
-- (Person*)initWithName: (NSString*) aName Status: (NSString*) aStatus AndAvatar: (NSString*) image;
+- (Person*)initWithName: (NSString*) aName Username: (NSString*) aUsername AndAvatar: (NSString*) image;
 @end
